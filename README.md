@@ -1,5 +1,5 @@
 # file_processor
-Assignment for Interview. Solution basd on Python + SQLite.
+Assignment for Interview. Solution based on Python + SQLite.
 
 ---
 ## Docker
