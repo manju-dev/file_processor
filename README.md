@@ -4,11 +4,34 @@ Assignment for Interview. Solution basd on Python + SQLite.
 ---
 ## Docker
 
-### Build docker image
+Clone and change directory into it the repo.
+
+* **Build docker image**
 > `$ docker build -t lfp .`
 
-### Run repo in docker container
+* **Run repo in docker container**
+
+The PATH_TO_DIR will be mounted as ./app and used as working directory in container.
 > `$ docker run -it --rm -v PATH_TO_DIR:/app lfp`
+
+* **Python shell**
+
+After the above two steps, you should see a python shell with ./app as working direcory. Import the app and initializ with a name.
+
+> `>>> from data_processor import DataProcessor`
+
+> `>>> app = DataProcessor('test.db')`
+
+* **Usage**
+
+After the import in Python shell, see the [Large_file_processor_Postman](Large_file_processor_Postman.ipynb) notebook for usage.
+
+---
+## Notebook
+
+Alternatively, you can download the [Large_file_processor_Postman](Large_file_processor_Postman.ipynb) notebook and upload to any Jupyter notebook server and use the app.
+
+Note: [Google Colab](https://colab.research.google.com) is a free notebook server that can use data in your GDrive account.
 
 ---
 ## Schema
@@ -22,14 +45,17 @@ An index named 'sku_idx' is created to make querying efficient.
 * SQL: CREATE INDEX sku_idx ON products(sku)
 
 ---
-## Data
+## Data in DB
+The products table will have 500000 records if ingested once.
+
+![Image of records](product-records.png)
 
 ---
 ## Deliverables
 
 1. Steps to run your code. As less steps we are to run, better for you (Hint: Docker)
 
-    See Docker section above
+    See Docker/Notbook section above
 
 2. Details of all the tables and their schema, [with commands to recreate them]
 
@@ -45,4 +71,8 @@ An index named 'sku_idx' is created to make querying efficient.
 
 5. What would you improve if given more days
 
-    Error handling and documentation.
+    * Error handling
+    * Edge cases with updating
+
+## Note
+If you see Database is locked error, it is because of the lightweight nature of SQLite and using parallelism to update, which shouldn't be a problem when using a other DBs.
