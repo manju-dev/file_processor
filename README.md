@@ -44,35 +44,6 @@ An index named 'sku_idx' is created to make querying efficient.
 
 * SQL: CREATE INDEX sku_idx ON products(sku)
 
----
-## Data in DB
-The products table will have 500000 records if ingested once.
-
-![Image of records](product-records.png)
-
----
-## Deliverables
-
-1. Steps to run your code. As less steps we are to run, better for you (Hint: Docker)
-
-    See Docker/Notbook section above
-
-2. Details of all the tables and their schema, [with commands to recreate them]
-
-    See Schema section above
-
-3. What is done from “Points to achieve” and number of entries in all your tables with sample 10 rows from each.
-
-    I think I have covered all points. See the Data section above.
-
-4. What is not done from “Points to achieve”. If not achieved write the possible reasons and current workarounds.
-
-    I think I have covered all points.
-
-5. What would you improve if given more days
-
-    * Error handling
-    * Edge cases with updating
 
 ## Note
 If you see Database is locked error, it is because of the lightweight nature of SQLite and using parallelism to update, which shouldn't be a problem when using a other DBs.
