@@ -24,13 +24,6 @@ After the above two steps, you should see a python shell with ./app as working d
 
 * **Usage**
 
-After the import in Python shell, see the [Large_file_processor_Postman](Large_file_processor_Postman.ipynb) notebook for usage.
-
----
-## Notebook
-
-Alternatively, you can download the [Large_file_processor_Postman](Large_file_processor_Postman.ipynb) notebook and upload to any Jupyter notebook server and use the app.
-
 Note: [Google Colab](https://colab.research.google.com) is a free notebook server that can use data in your GDrive account.
 
 ---
