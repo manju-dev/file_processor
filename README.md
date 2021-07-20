@@ -1,5 +1,5 @@
 # file_processor
-Assignment for Interview. Solution based on Python + SQLite.
+ETL Demo based on Python + SQLite.
 
 ---
 ## Docker
@@ -21,10 +21,6 @@ After the above two steps, you should see a python shell with ./app as working d
 > `>>> from data_processor import DataProcessor`
 
 > `>>> app = DataProcessor('test.db')`
-
-* **Usage**
-
-Note: [Google Colab](https://colab.research.google.com) is a free notebook server that can use data in your GDrive account.
 
 ---
 ## Schema
